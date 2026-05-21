@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Character counter</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+	<script src="./js/main.js" defer></script>
+
+	
+</head>
+<body class="background">
+	<header>
+		<div class="container">
+			<div class="header">
+				<img class= "dark-logo" src="images/logo.svg" alt="logo">
+				<img class= "light-logo" src="images/light-logo.svg" alt="logo">
+				<div class="sun mode-style">
+					<img  src="images/sun.svg" alt="sun">
+				</div>
+
+				<div class="moon mode-style">
+					<img src="images/moon.svg" alt="moon">
+				</div>
+			</div>			
+		</div>
+	</header>
+
+	<main>
+		<section class="container">
+			<div class="heading-input-box">
+				<div class="heading">
+					<h1>Analyze your text in real-time.</h1>
+				</div>
+
+				<div class="input-box" id="input-box">
+					<textarea id="text-box" class="text-box" placeholder="Start typing here (or paste your text)"></textarea>
+					<p class="error-text">Limit reached! Your text exceeds <span id="display-limit-characters">4</span> characters.</p>
+				</div>
+				
+				<div class="spaces-limit-time">
+					<div class="space-limit"> 
+						<div class="spaces">
+							<input class="spaces-limit-input" type="checkbox" name="checkbox" id="space">
+							<label  for="space">Exclude Spaces</label>
+						</div>
+
+						<div class="limit">
+							<input class="spaces-limit-input" type="checkbox" name="checkbox" id="limit">
+							<label for="limit">Set Character Limit</label>
+							<input type="number" name="max-number" class="max-number-limit" style="display:none">
+						</div>
+					</div>
+
+					<div class="time">
+						<p>Approx. reading time : <span id="display-minutes-to-read">0</span> minute</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container">
+			<div class="banner-list">
+				<div class=" banner total-charcters">
+					<div class="banner-value" >
+						<p id="total-charcters">00</p>
+					</div>
+
+					<div class="banner-title">
+						<p>Total Characters</p>
+					</div>
+				</div>
+
+				<div class="banner word-count">
+					<div class="banner-value">
+						<p id="word-count">00</p>
+					</div>
+
+					<div class="banner-title">
+						<p>Word Count</p>
+					</div>
+				</div>
+
+				<div class="banner sentence-count">
+					<div class="banner-value">
+						<p id="sentence-count">00</p>
+					</div>
+
+					<div class="banner-title">
+						<p>Sentence Count</p>
+					</div>
+				</div>				
+			</div>			
+		</section>
+
+		<section class="container">
+			<div class="density-title">
+				<h3>Letter Density</h3>
+			</div>
+
+			<div class="density-no-characters">
+				<p>No characters found. Start typing to see letter density.</p>
+			</div>
+
+			<div class="density-list" id="density-list">
+				<!-- will be rendered by js -->
+			</div>
+
+			<div class="density-label">
+				<p>See more</p>
+			</div>
+		</section>
+	</main>
+
+
+</body>
+</html>
